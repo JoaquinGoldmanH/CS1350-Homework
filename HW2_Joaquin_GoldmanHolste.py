@@ -1,12 +1,12 @@
-Unit 1.1
-Beginner:
+# Unit 1.1
+# Beginner:
 my_info = {
     "name": "Alice",
     "age": 20,
     "major": "Computer Science"
 }
 
-Intermediate:
+# Intermediate:
 menu = {
     "burger": 8.99,
     "fries": 3.49,
@@ -21,7 +21,7 @@ course_credits = {
     "BIO1100": 4
 }
 
-Advanced:
+# Advanced:
 weekly_temps = dict([
     ("Monday", 72),
     ("Tuesday", 75),
@@ -32,14 +32,14 @@ weekly_temps = dict([
     ("Sunday", 74)
 ])
 
-Unit 1.2
-Beginner:
+# Unit 1.2
+# Beginner:
 pet = {"name": "Buddy", "type": "dog", "age": 3}
 
 print(pet["name"])
 print(pet["age"])
 
-Intermediate:
+# Intermediate:
 pet = {"name": "Buddy", "type": "dog", "age": 3}
 
 # 1. Safely access a missing key with get()
@@ -54,7 +54,7 @@ if grades.get(course) is not None:
 else:
     print(f"{course} not found")
 
-Advanced:
+# Advanced:
 products = {"laptop": 999.99, "mouse": 29.99, "keyboard": 79.99}
 
 def find_price(products_dict, product_name):
@@ -69,8 +69,8 @@ print(find_price(products, "laptop"))   # 999.99
 # Test with a non-existing product
 print(find_price(products, "monitor"))   # Product not available
 
-Unit 1.3
-Beginner:
+# Unit 1.3
+# Beginner:
 inventory = {}
 
 # Add items here
@@ -80,7 +80,7 @@ inventory["oranges"] = 15
 
 print(inventory)
 
-Intermediate:
+# Intermediate:
 scores = {"Team A": 45, "Team B": 38}
 
 # 1. Update Team B and add Team C
@@ -93,7 +93,7 @@ print("Removed Team A score:", removed_score)
 
 print(scores)
 
-Advanced:
+# Advanced:
 # 1. Start with an empty cart dictionary
 cart = {}
 
@@ -117,35 +117,35 @@ total = sum(cart.values())
 print("Total price:", total)
 
 
-Unit 2.1
-Beginner:
+# Unit 2.1
+# Beginner:
 
-a) "student_name"      # valid (reason: strings are immutable and hashable)
-b) [1, 2, 3]          # invalid (reason: lists are mutable and unhashable)
-c) 100                # valid (reason: integers are hashable)
-d) ("x", "y")         # valid (reason: tuples are immutable and hashable)
-e) {"a": 1}           # invalid (reason: dictionaries are mutable and unhashable)
-f) frozenset({1,2})   # valid (reason: frozenset is immutable and hashable)
+# a) "student_name"      # valid (reason: strings are immutable and hashable)
+# b) [1, 2, 3]          # invalid (reason: lists are mutable and unhashable)
+# c) 100                # valid (reason: integers are hashable)
+# d) ("x", "y")         # valid (reason: tuples are immutable and hashable)
+# e) {"a": 1}           # invalid (reason: dictionaries are mutable and unhashable)
+# f) frozenset({1,2})   # valid (reason: frozenset is immutable and hashable)
 
-Intermediate:
-1)
+# Intermediate:
+# 1)
 locations = {
     (40.7, -74.0): "New York",
     (34.0, -118.2): "Los Angeles"
 }
 print(locations)
 
-2)
-{'a': 3, 'b': 4}
-2
+# 2)
+# {'a': 3, 'b': 4}
+# 2
 
-3)
+# 3)
 print(hash("Alice"))   
 print(hash(100))       
 
 
-Advanced:
-1)
+# Advanced:
+# 1)
 scores = {
     ("Alice", "Tetris"): 1200,
     ("Bob", "Snake"): 980,
@@ -154,7 +154,7 @@ scores = {
 
 print(scores[("Alice", "Tetris")]) 
 
-2)
+# 2)
 import time
 
 n = 100_000
@@ -180,9 +180,9 @@ else:
     print("Dictionary is not faster in this run")
 
 
-Unit 2.2
+# Unit 2.2
 
-Beginner:
+# Beginner:
 temps = {"Monday": 72, "Tuesday": 75, "Wednesday": 68}
 
 # 1. Print all the day names using keys()
@@ -194,7 +194,7 @@ print("Temperatures:", list(temps.values()))
 # 3. Print how many days are in the dictionary
 print("Number of days:", len(temps))
 
-Intermediate:
+# Intermediate:
 
 temps = {"Monday": 72, "Tuesday": 75, "Wednesday": 68}
 
@@ -222,7 +222,7 @@ print("Initial keys view:", list(keys_view))
 temps["Friday"] = 71
 print("Updated keys view:", list(keys_view))
 
-Advanced:
+# Advanced:
 import sys
 
 prices = {"laptop": 999, "phone": 699, "tablet": 449, "watch": 299}
@@ -257,24 +257,24 @@ prices.update({
 
 print("Updated products:", prices)
 
-Unit 2.3
+# Unit 2.3
 
-Beginner:
-1)
+# Beginner:
+# 1)
 colors = {"apple": "red", "banana": "yellow", "grape": "purple"}
 
 # 1. Use items() to print each fruit and its color
 for fruit, color in colors.items():
     print(f"The {fruit} is {color}")
 
-The apple is red
-The banana is yellow
-The grape is purple
+# The apple is red
+# The banana is yellow
+# The grape is purple
 
-2)
-[("apple", "red"), ("banana", "yellow"), ("grape", "purple")]
+# 2)
+# [("apple", "red"), ("banana", "yellow"), ("grape", "purple")]
 
-Intermediate:
+# Intermediate:
 
 prices = {"coffee": 4.50, "tea": 3.00, "juice": 5.25}
 
@@ -299,7 +299,7 @@ print("first =", first)
 print("middle =", middle)
 print("last =", last)
 
-Advanced:
+# Advanced:
 import time
 
 scores = {"Alice": 88, "Bob": 65, "Carol": 92, "Dave": 71, "Eve": 58}
@@ -343,4 +343,3 @@ keys_time = time.perf_counter() - start
 
 print(f"items() iteration: {items_time:.6f} seconds")
 print(f"keys() + lookup: {keys_time:.6f} seconds")
-
